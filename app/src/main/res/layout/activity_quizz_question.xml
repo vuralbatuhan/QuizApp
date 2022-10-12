@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".QuizzQuestionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/soru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Türkiye'de 4 bölgede toprağı bulunan il hangisidir?"
+            android:textColor="#363A43"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/resim"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/trbayrak" />
+
+        <LinearLayout
+            android:id="@+id/ilerleme_detaylar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/ilerleme"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:max="4"
+                android:minHeight="40dp"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/ilerleme_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="13dp"
+                android:textColorHint="#7A8081"
+                android:textSize="16sp"
+                tools:text="0/4" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/secenekBir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:gravity="center"
+            android:padding="14dp"
+            android:textColor="#7A8089"
+            android:textSize="17sp"
+            tools:text="ÇANKIRI" />
+
+        <TextView
+            android:id="@+id/secenekIki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:gravity="center"
+            android:padding="14dp"
+            android:textColor="#7A8089"
+            android:textSize="17sp"
+            tools:text="BİLECİK" />
+
+        <TextView
+            android:id="@+id/secenekUc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:gravity="center"
+            android:padding="14dp"
+            android:textColor="#7A8089"
+            android:textSize="17sp"
+            tools:text="AFYONKARAHİSAR" />
+
+        <TextView
+            android:id="@+id/secenekDort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:gravity="center"
+            android:padding="14dp"
+            android:textColor="#7A8089"
+            android:textSize="17sp"
+            tools:text="BOLU" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonKaydet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:background="@color/purple_500"
+            android:onClick="onClick"
+            android:text="KAYDET"
+            android:textSize="20sp"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</ScrollView>
